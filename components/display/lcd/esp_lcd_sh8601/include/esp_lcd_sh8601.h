@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2023-2025 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -54,6 +54,18 @@ typedef struct {
  *      - Otherwise: Fail
  */
 esp_err_t esp_lcd_new_panel_sh8601(const esp_lcd_panel_io_handle_t io, const esp_lcd_panel_dev_config_t *panel_dev_config, esp_lcd_panel_handle_t *ret_panel);
+
+/**
+ * @brief Set brightness for SH8601 LCD panel
+ *
+ * @param[in] panel LCD panel handle
+ * @param[in] brightness Brightness level (0-255, where 0 is minimum and 255 is maximum)
+ * @return
+ *      - ESP_OK: Success
+ *      - ESP_ERR_INVALID_ARG: Invalid argument
+ *      - Otherwise: Fail
+ */
+esp_err_t esp_lcd_panel_sh8601_set_brightness(esp_lcd_panel_handle_t panel, uint8_t brightness);
 
 /**
  * @brief LCD panel bus configuration structure

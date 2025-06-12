@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2023-2025 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -343,5 +343,16 @@ static esp_err_t panel_sh8601_disp_on_off(esp_lcd_panel_t *panel, bool on_off)
         command = LCD_CMD_DISPOFF;
     }
     ESP_RETURN_ON_ERROR(tx_param(sh8601, io, command, NULL, 0), TAG, "send command failed");
+    return ESP_OK;
+}
+
+esp_err_t esp_lcd_panel_sh8601_set_brightness(esp_lcd_panel_handle_t panel, uint8_t brightness)
+{
+    sh8601_panel_t *sh8601 = __containerof(panel, sh8601_panel_t, base);
+    esp_lcd_panel_io_handle_t io = sh8601->io;
+
+    ESP_RETURN_ON_ERROR(tx_param(sh8601, io, LCD_CMD_WRDISBV, (uint8_t[]) {
+        brightness
+    }, 1), TAG, "send brightness command failed");
     return ESP_OK;
 }
