@@ -315,13 +315,30 @@ static esp_err_t panel_sh8601_mirror(esp_lcd_panel_t *panel, bool mirror_x, bool
     ESP_RETURN_ON_ERROR(tx_param(sh8601, io, LCD_CMD_MADCTL, (uint8_t[]) {
         sh8601->madctl_val
     }, 1), TAG, "send command failed");
+
+    ESP_LOGI(TAG, "mirror set to X=%d Y=%d, MADCTL=0x%02X", mirror_x, mirror_y, sh8601->madctl_val);
     return ret;
 }
 
 static esp_err_t panel_sh8601_swap_xy(esp_lcd_panel_t *panel, bool swap_axes)
 {
-    ESP_LOGE(TAG, "swap_xy is not supported by this panel");
-    return ESP_ERR_NOT_SUPPORTED;
+    sh8601_panel_t *sh8601 = __containerof(panel, sh8601_panel_t, base);
+    esp_lcd_panel_io_handle_t io = sh8601->io;
+
+    // Bit 5 (MV) of MADCTL register controls row/column exchange (swap X/Y)
+    if (swap_axes) {
+        sh8601->madctl_val |= BIT(5);   // Set MV bit for X/Y swap
+    } else {
+        sh8601->madctl_val &= ~BIT(5);  // Clear MV bit
+    }
+
+    // Send updated MADCTL value to the panel
+    ESP_RETURN_ON_ERROR(tx_param(sh8601, io, LCD_CMD_MADCTL, (uint8_t[]) {
+        sh8601->madctl_val
+    }, 1), TAG, "send command failed");
+
+    ESP_LOGI(TAG, "swap_xy set to %d, MADCTL=0x%02X", swap_axes, sh8601->madctl_val);
+    return ESP_OK;
 }
 
 static esp_err_t panel_sh8601_set_gap(esp_lcd_panel_t *panel, int x_gap, int y_gap)
