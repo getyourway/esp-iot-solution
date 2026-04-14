@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2022-2024 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2022-2025 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -160,16 +160,6 @@ esp_err_t iot_sensor_stop(sensor_handle_t sensor_handle);
 esp_err_t iot_sensor_delete(sensor_handle_t p_sensor_handle);
 
 /**
- * @brief Scan for valid sensors attached on bus
- *
- * @param bus bus handle
- * @param buf Pointer to a buffer to save sensors' information, if NULL no information will be saved.
- * @param num Maximum number of sensor information to save, invalid if buf set to NULL,
- * latter sensors will be discarded if num less-than the total number found on the bus.
- * @return uint8_t total number of valid sensors found on the bus
- */
-
-/**
  * @brief Scan for valid sensors registered in the system
  *
  * @return int number of valid sensors
@@ -237,7 +227,6 @@ esp_err_t iot_sensor_handler_register_with_type(sensor_type_t sensor_type, int32
 esp_err_t iot_sensor_handler_unregister_with_type(sensor_type_t sensor_type, int32_t event_id, sensor_event_handler_instance_t context);
 
 #ifdef __cplusplus
-extern "C"
 }
 #endif
 #endif

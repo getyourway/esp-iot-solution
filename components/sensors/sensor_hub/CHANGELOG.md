@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.4 - 2026-1-23
+
+- Fix GPIO driver component requirement in CMake for newer ESP-IDF versions
+
+## v0.1.3 - 2025-9-11
+
+### Bug Fixes:
+
+- Fix compilation issue of `iot_sensor_hub` when using c++
+
 ## v0.1.2 - 2025-3-12
 
 ### Bug Fixes:

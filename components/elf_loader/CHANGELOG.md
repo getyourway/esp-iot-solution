@@ -1,7 +1,25 @@
 # ChangeLog
 
-## Unreleased - 2024-12-27
+## v1.3.1 - 2026-02-10
 
+* Added support for overriding symbol resolution with `elf_set_symbol_resolver()`
+
+## v1.3.0 - 2026-01-08
+
+* Added support for generating a shared library
+* Added support for dynamically loading shared objects
+
+## v1.2.0 - 2026-01-05
+
+* Support compiling ELF application into main binary firmware
+
+## v1.1.1 - 2025-06-26
+
+* Added support for ESP32-C61
+
+## v1.1.0 - 2025-05-06
+
+* Added fast build for ELF application
 * Added a script to generate the symbol table for the ELF APP:
   * Supports generating symbols table based on ELF file
   * Supports generating symbols table based on static libraries

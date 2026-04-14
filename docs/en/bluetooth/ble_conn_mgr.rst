@@ -6,7 +6,7 @@ BLE Connection Management
  Supported Socs       ESP32        ESP32-C2          ESP32-C3        ESP32-S3    
 ==================  ===========  ===============  =============== =============
 
-The BLE connection management provide a simplified API interface for accessing the commonly used BLE functionality. It supports common scenarios like peripheral, central among others. 
+The BLE connection management provides a simplified API interface for accessing the commonly used BLE functionality. It supports common scenarios like peripheral, central among others. 
 
 Application Example
 ---------------------------
@@ -27,6 +27,8 @@ Examples
 1. BLE periodic advertiser example: :example:`bluetooth/ble_conn_mgr/ble_periodic_adv`.
 2. BLE periodic sync example: :example:`bluetooth/ble_conn_mgr/ble_periodic_sync`.
 3. BLE serial port profile example: :example:`bluetooth/ble_conn_mgr/ble_spp`.
+4. BLE L2CAP CoC Central example: :example:`bluetooth/ble_l2cap_coc/l2cap_coc_central`.
+5. BLE L2CAP CoC Peripheral example: :example:`bluetooth/ble_l2cap_coc/l2cap_coc_peripheral`.
 
 API Reference
 -----------------

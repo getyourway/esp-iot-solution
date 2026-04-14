@@ -1,5 +1,18 @@
 # ChangeLog
 
+## v1.2.3 (2026-3-5)
+
+* Fix Windows multi-channel UAC enumeration (Code 10) by changing EP size padding in `tusb_config_uac.h` from fixed `+4` to frame-aligned `+FRAME_SZ`.
+
+
+## v1.2.2 (2025-9-23)
+
+* Remove usb component dependency for idf 6.0 and higher
+
+## v1.2.1 (2025-8-4)
+
+* Fix build issue and audio path for MIC-only configuration.
+
 ## v1.2.0 (2025-3-31)
 
 * Supports integration into other TinyUSB projects.

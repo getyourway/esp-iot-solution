@@ -1,3 +1,34 @@
+## v1.3.0 - 2026.03.25
+
+Features:
+- OTA: Support BLE OTA Service
+- DIS: Add deinit API for DIS Service
+
+## v1.2.3 - 2026.03.26
+
+Features:
+- CTS: Add callback for CTS characteristics.
+
+## v1.2.2 - 2026.03.06
+
+Bugfix:
+- CTS: Fix incorrect ATT operation for Reference Time Information characteristic (write → read).
+
+## v1.2.1 - 2026.02.11
+
+Bugfix:
+- MIDI: Add missing read support for MIDI I/O characteristic
+
+## v1.2.0 - 2026.01.15
+
+Features:
+- OTS: Support Object Transfer Service
+
+## v1.1.0 - 2025.12.26
+
+Features:
+- MIDI: Support BLE MIDI Service
+
 ## v1.0.0 - 2024.12.27
 
 Features:

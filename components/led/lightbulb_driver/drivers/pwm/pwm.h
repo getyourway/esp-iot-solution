@@ -6,6 +6,7 @@
 
 #pragma once
 #include "esp_idf_version.h"
+#include "driver/gpio.h"
 
 #define PWM_RGB_CHANNEL_PHASE_DELAY_FLAG        0X01
 #define PWM_CW_CHANNEL_PHASE_DELAY_FLAG         0X02
@@ -48,9 +49,10 @@ typedef enum {
  *
  * @param config Driver configuration
  * @param hook_func Hook function, which will be called inside the driver. e.g. to notify that config have been changed internally
+ * @param user_data User data pointer passed to hook function
  * @return esp_err_t
  */
-esp_err_t pwm_init(driver_pwm_t *config, void(*hook_func)(void *));
+esp_err_t pwm_init(driver_pwm_t *config, void(*hook_func)(void *, void *), void *user_data);
 
 /**
  * @brief Register the pwm channel

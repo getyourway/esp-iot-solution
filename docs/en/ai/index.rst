@@ -8,4 +8,6 @@ AI
     :maxdepth: 1
 
     OpenAI <openai>
+    MCP <mcp>
+    Xiaozhi <xiaozhi>
     TouchDigitRecognition <touch_digit_recognition>

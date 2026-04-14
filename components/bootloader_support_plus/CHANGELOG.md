@@ -1,5 +1,17 @@
 # ChangeLog
 
+## v0.4.0 - 2025-09-08
+
+### Improve:
+
+- Add ESP32-C61 and ESP32-S3 support.
+
+## v0.3.9 - 2025-06-17
+
+### Improve:
+
+- Add ESP32-C5 support.
+
 ## v0.3.8 - 2025-04-02
 
 ### Fix:

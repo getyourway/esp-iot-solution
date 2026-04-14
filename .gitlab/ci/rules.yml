@@ -40,8 +40,20 @@
   - "components/bluetooth/ble_profiles/std/ble_htp/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
+.patterns-components_bluetooth_ble_profiles_std_ble_otp: &patterns-components_bluetooth_ble_profiles_std_ble_otp
+  - "components/bluetooth/ble_profiles/std/ble_otp/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_bluetooth_ble_profiles_third_party_ble_midi: &patterns-components_bluetooth_ble_profiles_third_party_ble_midi
+  - "components/bluetooth/ble_profiles/third_party/ble_midi/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
 .patterns-components_bluetooth_ble_profiles_esp_ble_ota: &patterns-components_bluetooth_ble_profiles_esp_ble_ota
   - "components/bluetooth/ble_profiles/esp/ble_ota/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_bluetooth_ble_profiles_esp_ble_ota_raw: &patterns-components_bluetooth_ble_profiles_esp_ble_ota_raw
+  - "components/bluetooth/ble_profiles/esp/ble_ota_raw/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_bluetooth_ble_services: &patterns-components_bluetooth_ble_services
@@ -50,6 +62,10 @@
 
 .patterns-components_bluetooth_ble_hci: &patterns-components_bluetooth_ble_hci
   - "components/bluetooth/ble_hci/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_bluetooth_ble_adv_bthome: &patterns-components_bluetooth_ble_adv_bthome
+  - "components/bluetooth/ble_adv/bthome/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_bootloader_support_plus: &patterns-components_bootloader_support_plus
@@ -76,8 +92,14 @@
 .patterns-components_display_lcd_esp_lcd_axs15231b: &patterns-components_display_lcd_esp_lcd_axs15231b
   - "components/display/lcd/esp_lcd_axs15231b/**/*"
 
+.patterns-components_display_lcd_esp_lcd_co5300: &patterns-components_display_lcd_esp_lcd_co5300
+  - "components/display/lcd/esp_lcd_co5300/**/*"
+
 .patterns-components_display_lcd_esp_lcd_ek79007: &patterns-components_display_lcd_esp_lcd_ek79007
   - "components/display/lcd/esp_lcd_ek79007/**/*"
+
+.patterns-components_display_lcd_esp_lcd_er88577: &patterns-components_display_lcd_esp_lcd_er88577
+  - "components/display/lcd/esp_lcd_er88577/**/*"
 
 .patterns-components_display_lcd_esp_lcd_jd9165: &patterns-components_display_lcd_esp_lcd_jd9165
   - "components/display/lcd/esp_lcd_jd9165/**/*"
@@ -85,8 +107,14 @@
 .patterns-components_display_lcd_esp_lcd_jd9365: &patterns-components_display_lcd_esp_lcd_jd9365
   - "components/display/lcd/esp_lcd_jd9365/**/*"
 
+.patterns-components_display_lcd_esp_lcd_gc9107: &patterns-components_display_lcd_esp_lcd_gc9107
+  - "components/display/lcd/esp_lcd_gc9107/**/*"
+
 .patterns-components_display_lcd_esp_lcd_gc9b71: &patterns-components_display_lcd_esp_lcd_gc9b71
   - "components/display/lcd/esp_lcd_gc9b71/**/*"
+
+.patterns-components_display_lcd_esp_lcd_gc9d01: &patterns-components_display_lcd_esp_lcd_gc9d01
+  - "components/display/lcd/esp_lcd_gc9d01/**/*"
 
 .patterns-components_display_lcd_esp_lcd_hx8399: &patterns-components_display_lcd_esp_lcd_hx8399
   - "components/display/lcd/esp_lcd_hx8399/**/*"
@@ -97,6 +125,9 @@
 .patterns-components_display_lcd_esp_lcd_nv3022b: &patterns-components_display_lcd_esp_lcd_nv3022b
   - "components/display/lcd/esp_lcd_nv3022b/**/*"
 
+.patterns-components_display_lcd_esp_lcd_nv3052: &patterns-components_display_lcd_esp_lcd_nv3052
+  - "components/display/lcd/esp_lcd_nv3052/**/*"
+
 .patterns-components_display_lcd_esp_lcd_sh8601: &patterns-components_display_lcd_esp_lcd_sh8601
   - "components/display/lcd/esp_lcd_sh8601/**/*"
 
@@ -105,6 +136,9 @@
 
 .patterns-components_display_lcd_esp_lcd_st7701: &patterns-components_display_lcd_esp_lcd_st7701
   - "components/display/lcd/esp_lcd_st7701/**/*"
+
+.patterns-components_display_lcd_esp_lcd_st7123: &patterns-components_display_lcd_esp_lcd_st7123
+  - "components/display/lcd/esp_lcd_st7123/**/*"
 
 .patterns-components_display_lcd_esp_lcd_st7703: &patterns-components_display_lcd_esp_lcd_st7703
   - "components/display/lcd/esp_lcd_st7703/**/*"
@@ -133,11 +167,12 @@
 .patterns-components_display_lcd_touch_esp_lcd_touch_st7123: &patterns-components_display_lcd_touch_esp_lcd_touch_st7123
   - "components/display/lcd_touch/esp_lcd_touch_st7123/**/*"
 
-.patterns-components_display_screen: &patterns-components_display_screen
-  - "components/display/screen/**/*"
-
 .patterns-components_display_tools_esp_lv_decoder: &patterns-components_display_tools_esp_lv_decoder
   - "components/display/tools/esp_lv_decoder/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_display_tools_esp_lvgl_adapter: &patterns-components_display_tools_esp_lvgl_adapter
+  - "components/display/tools/esp_lvgl_adapter/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_display_tools_esp_lv_fs: &patterns-components_display_tools_esp_lv_fs
@@ -148,8 +183,13 @@
   - "components/display/tools/esp_mmap_assets/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
-.patterns-components_display_touch_panel: &patterns-components_display_touch_panel
-  - "components/display/touch_panel/**/*"
+.patterns-components_display_tools_esp_lv_eaf_player: &patterns-components_display_tools_esp_lv_eaf_player
+  - "components/display/tools/esp_lv_eaf_player/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_display_tools_esp_lv_lottie_player: &patterns-components_display_tools_esp_lv_lottie_player
+  - "components/display/tools/esp_lv_lottie_player/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_keyboard_button: &patterns-components_keyboard_button
   - "components/keyboard_button/**/*"
@@ -161,9 +201,6 @@
 .patterns-components_extended_vfs: &patterns-components_extended_vfs
   - "components/extended_vfs/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
-
-.patterns-components_gui_lvgl_gui: &patterns-components_gui_lvgl_gui
-  - "components/gui/lvgl_gui/**/*"
 
 .patterns-components_ir_ir_learn: &patterns-components_ir_ir_learn
   - "components/ir/ir_learn/**/*"
@@ -200,6 +237,10 @@
   - "components/motor/servo/**/*"
   - "components/tools/cmake_utilities/package_manager.cmake"
 
+.patterns-components_mcp_c_sdk: &patterns-components_mcp_c_sdk
+  - "components/mcp-c-sdk/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
 .patterns-components_openai: &patterns-components_openai
   - "components/openai/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
@@ -218,6 +259,14 @@
 
 .patterns-components_sensors_battery_fuel_gauge_max17048: &patterns-components_sensors_battery_fuel_gauge_max17048
   - "components/sensors/battery_fuel_gauge/max17048/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_sensors_battery_fuel_gauge_bq27220: &patterns-components_sensors_battery_fuel_gauge_bq27220
+  - "components/sensors/battery_fuel_gauge/bq27220/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_sensors_gas_bme690: &patterns-components_sensors_gas_bme690
+  - "components/sensors/gas/bme690/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_sensors_gesture_apds9960: &patterns-components_sensors_gesture_apds9960
@@ -315,16 +364,16 @@
   - "components/usb/iot_usbh_cdc/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
+.patterns-components_modem_at: &patterns-components_modem_at
+  - "components/modem_at/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
 .patterns-components_usb_iot_usbh_modem: &patterns-components_usb_iot_usbh_modem
   - "components/usb/iot_usbh_modem/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_usb_iot_usbh_ecm: &patterns-components_usb_iot_usbh_ecm
   - "components/usb/iot_usbh_ecm/**/*"
-  - "tools/cmake_utilities/package_manager.cmake"
-
-.patterns-components_usb_usb_host_rndis_test_apps: &patterns-components_usb_usb_host_rndis_test_apps
-  - "components/usb/usb_host_rndis/test_apps/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
 .patterns-components_usb_usb_device_uac: &patterns-components_usb_usb_device_uac
@@ -351,6 +400,10 @@
   - "components/zero_detection/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
+.patterns-components_touch_ic_bs8112a3: &patterns-components_touch_ic_bs8112a3
+  - "components/touch_ic/touch_ic_bs8112a3/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
 .patterns-components_ntc_driver: &patterns-components_ntc_driver
   - "components/sensors/ntc_driver/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
@@ -371,6 +424,16 @@
   - "components/utilities/adc_tp_calibration/**/*"
   - "tools/cmake_utilities/package_manager.cmake"
 
+.patterns-components_utilities_log_router: &patterns-components_utilities_log_router
+  - "components/utilities/log_router/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
+.patterns-components_esp_weaver: &patterns-components_esp_weaver
+  - "components/esp_weaver/**/*"
+.patterns-components_esp_xiaozhi: &patterns-components_esp_xiaozhi
+  - "components/esp_xiaozhi/**/*"
+  - "tools/cmake_utilities/package_manager.cmake"
+
 # examples folder, in the alphabetic order
 .patterns-docs: &patterns-docs
   - "docs/**/*"
@@ -379,38 +442,56 @@
   - "**/*.md"
 
 .patterns-docs_inc: &patterns-docs_inc
-
+  - "components/audio/adc_mic/adc_mic.h"
   - "components/audio/dac_audio/include/dac_audio.h"
   - "components/audio/pwm_audio/include/pwm_audio.h"
   - "components/avi_player/include/avi_player.h"
   - "components/bluetooth/ble_conn_mgr/include/esp_ble_conn_mgr.h"
-  - "components/bluetooth/ble_conn_mgr/include/esp_ble_conn_mgr.h"
   - "components/bluetooth/ble_hci/include/ble_hci.h"
+  - "components/bluetooth/ble_profiles/std/ble_anp/include/esp_anp.h"
+  - "components/bluetooth/ble_profiles/std/ble_hrp/include/esp_hrp.h"
+  - "components/bluetooth/ble_profiles/std/ble_htp/include/esp_htp.h"
   - "components/bluetooth/ble_services/ans/include/esp_ans.h"
   - "components/bluetooth/ble_services/bas/include/esp_bas.h"
   - "components/bluetooth/ble_services/bcs/include/esp_bcs.h"
+  - "components/bluetooth/ble_services/cts/include/esp_cts.h"
   - "components/bluetooth/ble_services/dis/include/esp_dis.h"
   - "components/bluetooth/ble_services/hrs/include/esp_hrs.h"
   - "components/bluetooth/ble_services/hts/include/esp_hts.h"
+  - "components/bluetooth/ble_services/ots/include/esp_ots.h"
   - "components/bluetooth/ble_services/tps/include/esp_tps.h"
+  - "components/bluetooth/ble_services/uds/include/esp_uds.h"
+  - "components/bluetooth/ble_services/wss/include/esp_wss.h"
+  - "components/bus/include/i2s_lcd_driver.h"
   - "components/button/include/iot_button.h"
-  - "components/display/screen/interface_driver/scr_interface_driver.h"
-  - "components/display/screen/screen_driver.h"
   - "components/display/tools/esp_lv_decoder/include/esp_lv_decoder.h"
   - "components/display/tools/esp_lv_fs/include/esp_lv_fs.h"
+  - "components/display/tools/esp_lvgl_adapter/include/esp_lv_adapter.h"
+  - "components/display/tools/esp_lvgl_adapter/include/esp_lv_adapter_display.h"
+  - "components/display/tools/esp_lvgl_adapter/include/esp_lv_adapter_input.h"
   - "components/display/tools/esp_mmap_assets/include/esp_mmap_assets.h"
-  - "components/display/touch_panel/touch_panel.h"
   - "components/i2c_bus/include/i2c_bus.h"
+  - "components/iot_eth/include/iot_eth.h"
   - "components/ir/ir_learn/include/ir_learn.h"
   - "components/keyboard_button/include/keyboard_button.h"
   - "components/knob/include/iot_knob.h"
   - "components/led/led_indicator/include/led_indicator.h"
-  - "components/motor/esp_sensorless_bldc_control/control/include/bldc_control.h"
+  - "components/led/lightbulb_driver/include/lightbulb.h"
   - "components/motor/esp_sensorless_bldc_control/control/include/bldc_control_param.h"
+  - "components/motor/esp_sensorless_bldc_control/include/bldc_control.h"
   - "components/motor/esp_sensorless_bldc_control/user_cfg/bldc_user_cfg.h"
   - "components/motor/servo/include/iot_servo.h"
+  - "components/mcp-c-sdk/include/esp_mcp_mgr.h"
+  - "components/mcp-c-sdk/include/esp_mcp_engine.h"
+  - "components/mcp-c-sdk/include/esp_mcp_tool.h"
+  - "components/mcp-c-sdk/include/esp_mcp_data.h"
+  - "components/mcp-c-sdk/include/esp_mcp_property.h"
+  - "components/esp_weaver/include/esp_weaver.h"
   - "components/openai/include/OpenAI.h"
+
+.patterns-docs_inc_2: &patterns-docs_inc_2
   - "components/sensors/ntc_driver/include/ntc_driver.h"
+  - "components/sensors/power_measure/include/power_measure.h"
   - "components/sensors/power_monitor/ina236/include/ina236.h"
   - "components/sensors/sensor_hub/include/hal/humiture_hal.h"
   - "components/sensors/sensor_hub/include/hal/imu_hal.h"
@@ -418,20 +499,27 @@
   - "components/sensors/sensor_hub/include/iot_sensor_hub.h"
   - "components/sensors/sensor_hub/include/sensor_type.h"
   - "components/spi_bus/include/spi_bus.h"
+  - "components/touch/touch_button_sensor/include/touch_button_sensor.h"
   - "components/touch/touch_proximity_sensor/include/touch_proximity_sensor.h"
+  - "components/touch/touch_slider_sensor/include/touch_slider_sensor.h"
   - "components/usb/esp_msc_ota/include/esp_msc_ota.h"
   - "components/usb/esp_tinyuf2/esp_tinyuf2.h"
   - "components/usb/iot_usbh_cdc/include/iot_usbh_cdc.h"
-  - "components/usb/iot_usbh_ecm/include/iot_usbh_ecm.h"
-  - "components/usb/iot_usbh_rndis/include/iot_usbh_rndis.h"
   - "components/usb/usb_device_uac/include/usb_device_uac.h"
   - "components/usb/usb_device_uvc/include/usb_device_uvc.h"
   - "components/usb/usb_stream/include/usb_stream.h"
   - "components/utilities/adc_tp_calibration/include/adc_tp_calibration.h"
+  - "components/usb/iot_usbh_rndis/include/iot_usbh_rndis.h"
+  - "components/usb/iot_usbh_ecm/include/iot_usbh_ecm.h"
   - "components/zero_detection/include/zero_detection.h"
+  - "components/esp_xiaozhi/include/esp_xiaozhi_chat.h"
+
 # examples folder, in the alphabetic order
 .patterns-example_ai_esp_dl_human_activity_recognition: &patterns-example_ai_esp_dl_human_activity_recognition
   - "examples/ai/esp_dl/human_activity_recognition/**/*"
+
+.patterns-example_ai_esp_dl_self_learning_classification: &patterns-example_ai_esp_dl_self_learning_classification
+  - "examples/ai/esp_dl/self_learning_classification/**/*"
 
 .patterns-example_ai_esp_dl_touchpad_digit_recognition: &patterns-example_ai_esp_dl_touchpad_digit_recognition
   - "examples/ai/esp_dl/touchpad_digit_recognition/**/*"
@@ -442,6 +530,9 @@
 .patterns-example_bluetooth_ble_conn_mgr: &patterns-example_bluetooth_ble_conn_mgr
   - "examples/bluetooth/ble_conn_mgr/**/*"
 
+.patterns-example_bluetooth_ble_l2cap_coc: &patterns-example_bluetooth_ble_l2cap_coc
+  - "examples/bluetooth/ble_l2cap_coc/**/*"
+
 .patterns-example_bluetooth_ble_anp: &patterns-example_bluetooth_ble_anp
   - "examples/bluetooth/ble_anp/**/*"
 
@@ -451,8 +542,20 @@
 .patterns-example_bluetooth_ble_htp: &patterns-example_bluetooth_ble_htp
   - "examples/bluetooth/ble_htp/**/*"
 
+.patterns-example_bluetooth_ble_midi: &patterns-example_bluetooth_ble_midi
+  - "examples/bluetooth/ble_profiles/ble_midi/**/*"
+
+.patterns-example_bluetooth_ble_otp_client: &patterns-example_bluetooth_ble_otp_client
+  - "examples/bluetooth/ble_profiles/ble_otp/ble_otp_client/**/*"
+
+.patterns-example_bluetooth_ble_otp_server: &patterns-example_bluetooth_ble_otp_server
+  - "examples/bluetooth/ble_profiles/ble_otp/ble_otp_server/**/*"
+
 .patterns-example_bluetooth_ble_ota: &patterns-example_bluetooth_ble_ota
   - "examples/bluetooth/ble_ota/**/*"
+
+.patterns-example_bluetooth_ble_ota_raw: &patterns-example_bluetooth_ble_ota_raw
+  - "examples/bluetooth/ble_profiles/ble_ota/**/*"
 
 .patterns-example_bluetooth_ble_services: &patterns-example_bluetooth_ble_services
   - "examples/bluetooth/ble_services/**/*"
@@ -475,20 +578,23 @@
 .patterns-example_camera_video_stream_server: &patterns-example_camera_video_stream_server
   - "examples/camera/video_stream_server/**/*"
 
-.patterns-example_check_pedestrian_flow: &patterns-example_check_pedestrian_flow
-  - "examples/check_pedestrian_flow/**/*"
-
 .patterns-example_common_components_boards: &patterns-example_common_components_boards
   - "examples/common_components/boards/**/*"
 
 .patterns-example_common_components_camera: &patterns-example_common_components_camera
   - "examples/common_components/camera/**/*"
 
+.patterns-example_display_lcd_hdmi_video_renderer: &patterns-example_display_lcd_hdmi_video_renderer
+  - "examples/display/lcd/hdmi_video_renderer/**/*"
+
 .patterns-example_display_lcd_lcd_layer_blending: &patterns-example_display_lcd_lcd_layer_blending
   - "examples/display/lcd/lcd_layer_blending/**/*"
 
 .patterns-example_display_lcd_lcd_with_te: &patterns-example_display_lcd_lcd_with_te
   - "examples/display/lcd/lcd_with_te/**/*"
+
+.patterns-example_display_lcd_lcd_pattern_test: &patterns-example_display_lcd_lcd_pattern_test
+  - "examples/display/lcd/lcd_pattern_test/**/*"
 
 .patterns-example_display_lcd_mipi_dsi_avoid_tearing: &patterns-example_display_lcd_mipi_dsi_avoid_tearing
   - "examples/display/lcd/mipi_dsi_avoid_tearing/**/*"
@@ -504,6 +610,36 @@
 
 .patterns-example_display_lcd_rgb_avoid_tearing: &patterns-example_display_lcd_rgb_avoid_tearing
   - "examples/display/lcd/rgb_avoid_tearing/**/*"
+
+.patterns-example_display_gui_lvgl_common_demo: &patterns-example_display_gui_lvgl_common_demo
+  - "examples/display/gui/lvgl_common_demo/**/*"
+
+.patterns-example_display_gui_lvgl_decode_image: &patterns-example_display_gui_lvgl_decode_image
+  - "examples/display/gui/lvgl_decode_image/**/*"
+
+.patterns-example_display_gui_lvgl_dummy_draw: &patterns-example_display_gui_lvgl_dummy_draw
+  - "examples/display/gui/lvgl_dummy_draw/**/*"
+
+.patterns-example_display_gui_lvgl_freetype_font: &patterns-example_display_gui_lvgl_freetype_font
+  - "examples/display/gui/lvgl_freetype_font/**/*"
+
+.patterns-example_display_gui_lvgl_multi_screen: &patterns-example_display_gui_lvgl_multi_screen
+  - "examples/display/gui/lvgl_multi_screen/**/*"
+
+.patterns-example_display_gui_lvgl_light_sleep_demo: &patterns-example_display_gui_lvgl_light_sleep_demo
+  - "examples/display/gui/lvgl_light_sleep_demo/**/*"
+
+.patterns-example_display_gui_lvgl_mono_demo: &patterns-example_display_gui_lvgl_mono_demo
+  - "examples/display/gui/lvgl_mono_demo/**/*"
+
+.patterns-example_display_gui_lvgl_eaf_player: &patterns-example_display_gui_lvgl_eaf_player
+  - "examples/display/gui/lvgl_eaf_player/**/*"
+
+.patterns-example_display_gui_lvgl_fs_assets: &patterns-example_display_gui_lvgl_fs_assets
+  - "examples/display/gui/lvgl_fs_assets/**/*"
+
+.patterns-example_display_gui_lvgl_lottie_player: &patterns-example_display_gui_lvgl_lottie_player
+  - "examples/display/gui/lvgl_lottie_player/**/*"
 
 .patterns-example_extended_vfs_gpio_gpio_simple: &patterns-example_extended_vfs_gpio_gpio_simple
   - "examples/extended_vfs/gpio/gpio_simple/**/*"
@@ -541,9 +677,6 @@
 .patterns-example_lighting_lightbulb: &patterns-example_lighting_lightbulb
   - "examples/lighting/lightbulb/**/*"
 
-.patterns-example_lvgl_freetype: &patterns-example_lvgl_freetype
-  - "examples/hmi/lvgl_freetype/**/*"
-
 .patterns-example_motor_bldc_fan_rainmaker: &patterns-example_motor_bldc_fan_rainmaker
   - "examples/motor/bldc_fan_rainmaker/**/*"
 
@@ -562,14 +695,14 @@
 .patterns-example_motor_servo_control: &patterns-example_motor_servo_control
   - "examples/motor/servo_control/**/*"
 
+.patterns-example_mcp_server: &patterns-example_mcp_server
+  - "examples/mcp/mcp_server/**/*"
+
+.patterns-example_mcp_client: &patterns-example_mcp_client
+  - "examples/mcp/mcp_client/**/*"
+
 .patterns-example_ota_simple_ota_example: &patterns-example_ota_simple_ota_example
   - "examples/ota/simple_ota_example/**/*"
-
-.patterns-example_perf_benchmark: &patterns-example_perf_benchmark
-  - "examples/hmi/perf_benchmark/**/*"
-
-.patterns-example_screen: &patterns-example_screen
-  - "examples/screen/**/*"
 
 .patterns-example_sensors_sensor_control_led: &patterns-example_sensors_sensor_control_led
   - "examples/sensors/sensor_control_led/**/*"
@@ -649,6 +782,9 @@
 .patterns-example_usb_host_usb_cdc_basic: &patterns-example_usb_host_usb_cdc_basic
   - "examples/usb/host/usb_cdc_basic/**/*"
 
+.patterns-example_usb_host_usb_host_msc_example: &patterns-example_usb_host_usb_host_msc_example
+  - "examples/usb/host/usb_host_msc_example/**/*"
+
 .patterns-example_usb_host_usb_hub_dual_camera: &patterns-example_usb_host_usb_hub_dual_camera
   - "examples/usb/host/usb_hub_dual_camera/**/*"
 
@@ -682,12 +818,31 @@
 .patterns-example_elf_loader_build_elf_file_example: &patterns-example_elf_loader_build_elf_file_example
   - "examples/elf_loader/build_elf_file_example/**/*"
 
+.patterns-example_elf_loader_elf_embed_example: &patterns-example_elf_loader_elf_embed_example
+  - "examples/elf_loader/elf_embed_example/**/*"
+
+.patterns-example_elf_loader_elf_console_example: &patterns-example_elf_loader_elf_console_example
+  - "examples/elf_loader/elf_console_example/**/*"
+
 .patterns-example_zero_cross_detection_example: &patterns-example_zero_cross_detection_example
   - "examples/zero_cross_detecion/**/*"
 
 .patterns-example_relinker: &patterns-example_relinker
   - "examples/relinker/**/*"
   - "tools/cmake_utilities/scripts/relinker/**/*"
+
+.patterns-example_ragtime_panthera_follower: &patterns-example_ragtime_panthera_follower
+  - "examples/robot/ragtime_panthera/follower/**/*"
+
+.patterns-example_robot_ragtime_panthera_leader: &patterns-example_robot_ragtime_panthera_leader
+  - "examples/robot/ragtime_panthera/leader/**/*"
+
+.patterns-example_weaver_led_light: &patterns-example_weaver_led_light
+  - "examples/weaver/led_light/**/*"
+.patterns-example_xiaozhi_chat: &patterns-example_xiaozhi_chat
+  - "examples/ai/xiaozhi_chat/**/*"
+.patterns-example_weaver_imu_gesture: &patterns-example_weaver_imu_gesture
+  - "examples/weaver/imu_gesture/**/*"
 
 # tools folder, in the alphabetic order
 .patterns-tools_cmake_utilities: &patterns-tools_cmake_utilities
@@ -709,7 +864,7 @@
 # Auto Generated #
 ##################
 .if-trigger-job: &if-trigger-job
-  if: '$BOT_DYNAMIC_TEST_JOBS && $BOT_DYNAMIC_TEST_JOBS =~ $CI_JOB_NAME'
+  if: "$BOT_DYNAMIC_TEST_JOBS && $BOT_DYNAMIC_TEST_JOBS =~ $CI_JOB_NAME"
 
 .if-label-build: &if-label-build
   if: '$BOT_LABEL_BUILD || $CI_MERGE_REQUEST_LABELS =~ /^(?:[^,\n\r]+,)*build(?:,[^,\n\r]+)*$/i'
@@ -736,6 +891,16 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-example_ai_esp_dl_human_activity_recognition
+
+.rules:build:example_ai_esp_dl_self_learning_classification:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_ai_esp_dl_self_learning_classification
 
 .rules:build:example_ai_esp_dl_touchpad_digit_recognition:
   rules:
@@ -804,6 +969,43 @@
     - <<: *if-dev-push
       changes: *patterns-example_bluetooth_ble_htp
 
+.rules:build:example_bluetooth_ble_otp_client:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_profiles_std_ble_otp
+    - <<: *if-dev-push
+      changes: *patterns-example_bluetooth_ble_otp_client
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_services
+
+.rules:build:example_bluetooth_ble_otp_server:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_profiles_std_ble_otp
+    - <<: *if-dev-push
+      changes: *patterns-example_bluetooth_ble_otp_server
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_services
+
+.rules:build:example_bluetooth_ble_midi:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_profiles_third_party_ble_midi
+    - <<: *if-dev-push
+      changes: *patterns-example_bluetooth_ble_midi
+
 .rules:build:example_bluetooth_ble_services:
   rules:
     - <<: *if-protected
@@ -827,6 +1029,18 @@
     - <<: *if-dev-push
       changes: *patterns-example_bluetooth_ble_ota
 
+.rules:build:example_bluetooth_ble_ota_raw:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_profiles_esp_ble_ota_raw
+    - <<: *if-dev-push
+      changes: *patterns-example_bluetooth_ble_ota_raw
+
 .rules:build:example_bluetooth_ble_remote_control:
   rules:
     - <<: *if-protected
@@ -835,6 +1049,18 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-example_bluetooth_ble_remote_control
+
+.rules:build:example_bluetooth_ble_l2cap_coc:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_conn_mgr
+    - <<: *if-dev-push
+      changes: *patterns-example_bluetooth_ble_l2cap_coc
 
 .rules:build:example_camera_basic:
   rules:
@@ -896,7 +1122,7 @@
     - <<: *if-dev-push
       changes: *patterns-example_common_components_camera
 
-.rules:build:example_check_pedestrian_flow:
+.rules:build:example_display_lcd_hdmi_video_renderer:
   rules:
     - <<: *if-protected
     - <<: *if-label-build
@@ -904,7 +1130,7 @@
     - <<: *if-dev-push
       changes: *patterns-build_system
     - <<: *if-dev-push
-      changes: *patterns-example_check_pedestrian_flow
+      changes: *patterns-example_display_lcd_hdmi_video_renderer
 
 .rules:build:example_display_lcd_lcd_layer_blending:
   rules:
@@ -929,6 +1155,18 @@
       changes: *patterns-example_display_lcd_lcd_with_te
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_axs15231b
+
+.rules:build:example_display_lcd_lcd_pattern_test:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_ek79007
+    - <<: *if-dev-push
+      changes: *patterns-example_display_lcd_lcd_pattern_test
 
 .rules:build:example_display_lcd_mipi_dsi_avoid_tearing:
   rules:
@@ -997,6 +1235,136 @@
       changes: *patterns-components_display_lcd_esp_lcd_panel_io_additions
     - <<: *if-dev-push
       changes: *patterns-example_display_lcd_rgb_avoid_tearing
+
+.rules:build:example_display_gui_lvgl_common_demo:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_common_demo
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_decode_image:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_decode_image
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_decoder
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_fs
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_mmap_assets
+
+.rules:build:example_display_gui_lvgl_dummy_draw:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_dummy_draw
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_freetype_font:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_freetype_font
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_fs
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_mmap_assets
+
+.rules:build:example_display_gui_lvgl_multi_screen:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_multi_screen
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_light_sleep_demo:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_light_sleep_demo
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_mono_demo:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_mono_demo
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_eaf_player:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_eaf_player
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_eaf_player
+
+.rules:build:example_display_gui_lvgl_fs_assets:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_fs_assets
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:example_display_gui_lvgl_lottie_player:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_display_gui_lvgl_lottie_player
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_lottie_player
 
 .rules:build:example_extended_vfs_gpio_gpio_simple:
   rules:
@@ -1105,13 +1473,13 @@
       changes: *patterns-example_get_started_knob_power_save
 
 .rules:build:example_sensors_power_measure:
- rules:
-   - <<: *if-protected
-   - <<: *if-label-build
-   - <<: *if-dev-push
-     changes: *patterns-components_sensors_power_measure
-   - <<: *if-dev-push
-     changes: *patterns-example_sensors_power_measure
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-dev-push
+      changes: *patterns-components_sensors_power_measure
+    - <<: *if-dev-push
+      changes: *patterns-example_sensors_power_measure
 
 .rules:build:example_gprof_gprof_simple:
   rules:
@@ -1158,18 +1526,6 @@
       changes: *patterns-components_led_lightbulb_driver
     - <<: *if-dev-push
       changes: *patterns-example_lighting_lightbulb
-
-.rules:build:example_lvgl_freetype:
-  rules:
-    - <<: *if-protected
-    - <<: *if-label-build
-    - <<: *if-trigger-job
-    - <<: *if-dev-push
-      changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-example_lvgl_freetype
-    - <<: *if-dev-push
-      changes: *patterns-components_display_tools_esp_mmap_assets
 
 .rules:build:example_motor_bldc_fan_rainmaker:
   rules:
@@ -1247,6 +1603,30 @@
     - <<: *if-dev-push
       changes: *patterns-example_motor_servo_control
 
+.rules:build:example_mcp_server:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_mcp_c_sdk
+    - <<: *if-dev-push
+      changes: *patterns-example_mcp_server
+
+.rules:build:example_mcp_client:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_mcp_c_sdk
+    - <<: *if-dev-push
+      changes: *patterns-example_mcp_client
+
 .rules:build:example_ota_simple_ota_example:
   rules:
     - <<: *if-protected
@@ -1259,34 +1639,6 @@
     - <<: *if-dev-push
       changes: *patterns-example_ota_simple_ota_example
 
-.rules:build:example_perf_benchmark:
-  rules:
-    - <<: *if-protected
-    - <<: *if-label-build
-    - <<: *if-trigger-job
-    - <<: *if-dev-push
-      changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-example_perf_benchmark
-    - <<: *if-dev-push
-      changes: *patterns-components_display_tools_esp_mmap_assets
-    - <<: *if-dev-push
-      changes: *patterns-components_display_tools_esp_lv_decoder
-    - <<: *if-dev-push
-      changes: *patterns-components_display_tools_esp_lv_fs
-
-.rules:build:example_screen:
-  rules:
-    - <<: *if-protected
-    - <<: *if-label-build
-    - <<: *if-trigger-job
-    - <<: *if-dev-push
-      changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-components_display_screen
-    - <<: *if-dev-push
-      changes: *patterns-example_screen
-
 .rules:build:example_sensors_sensor_control_led:
   rules:
     - <<: *if-protected
@@ -1294,8 +1646,6 @@
     - <<: *if-trigger-job
     - <<: *if-dev-push
       changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-components_bus
     - <<: *if-dev-push
       changes: *patterns-components_sensors_gesture_apds9960
     - <<: *if-dev-push
@@ -1330,8 +1680,6 @@
     - <<: *if-trigger-job
     - <<: *if-dev-push
       changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-components_bus
     - <<: *if-dev-push
       changes: *patterns-components_sensors_gesture_apds9960
     - <<: *if-dev-push
@@ -1597,13 +1945,13 @@
     - <<: *if-dev-push
       changes: *patterns-build_system
     - <<: *if-dev-push
-      changes: *patterns-components_led_led_indicator
-    - <<: *if-dev-push
-      changes: *patterns-components_usb_iot_usbh
-    - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh_cdc
     - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh_modem
+    - <<: *if-dev-push
+      changes: *patterns-components_modem_at
+    - <<: *if-dev-push
+      changes: *patterns-components_iot_eth
     - <<: *if-dev-push
       changes: *patterns-example_usb_host_usb_cdc_4g_module
 
@@ -1620,6 +1968,18 @@
       changes: *patterns-components_usb_iot_usbh_cdc
     - <<: *if-dev-push
       changes: *patterns-example_usb_host_usb_cdc_basic
+
+.rules:build:example_usb_host_usb_host_msc_example:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_usb_host_usb_host_msc_example
+    - <<: *if-dev-push
+      changes: *patterns-components_usb_esp_msc_ota
 
 .rules:build:example_usb_host_usb_hub_dual_camera:
   rules:
@@ -1743,6 +2103,26 @@
     - <<: *if-dev-push
       changes: *patterns-example_elf_loader_build_elf_file_example
 
+.rules:build:example_elf_loader_elf_embed_example:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_elf_loader_elf_embed_example
+
+.rules:build:example_elf_loader_elf_console_example:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_elf_loader_elf_console_example
+
 .rules:build:example_relinker:
   rules:
     - <<: *if-protected
@@ -1752,6 +2132,50 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-example_relinker
+
+.rules:build:example_ragtime_panthera_follower:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_ragtime_panthera_follower
+
+.rules:build:example_robot_ragtime_panthera_leader:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-example_robot_ragtime_panthera_leader
+
+.rules:build:example_weaver_imu_gesture:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_esp_weaver
+    - <<: *if-dev-push
+      changes: *patterns-example_weaver_imu_gesture
+
+.rules:build:example_weaver_led_light:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_esp_weaver
+    - <<: *if-dev-push
+      changes: *patterns-example_weaver_led_light
 
 # rules for ut
 .rules:build:component_audio_adc_mic_test_apps:
@@ -1808,6 +2232,17 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_bluetooth_ble_hci
+
+.rules:build:components_bluetooth_ble_adv_bthome_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_bluetooth_ble_adv_bthome
 
 .rules:build:component_bus_test:
   rules:
@@ -1886,6 +2321,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_axs15231b
 
+.rules:build:components_display_lcd_esp_lcd_co5300_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_co5300
+
 .rules:build:components_display_lcd_esp_lcd_ek79007_test_apps:
   rules:
     - <<: *if-protected
@@ -1896,6 +2342,17 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_ek79007
+
+.rules:build:components_display_lcd_esp_lcd_er88577_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_er88577
 
 .rules:build:components_display_lcd_esp_lcd_jd9165_test_apps:
   rules:
@@ -1919,6 +2376,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_jd9365
 
+.rules:build:components_display_lcd_esp_lcd_gc9107_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_gc9107
+
 .rules:build:components_display_lcd_esp_lcd_gc9b71_test_apps:
   rules:
     - <<: *if-protected
@@ -1929,6 +2397,17 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_gc9b71
+
+.rules:build:components_display_lcd_esp_lcd_gc9d01_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_gc9d01
 
 .rules:build:components_display_lcd_esp_lcd_hx8399_test_apps:
   rules:
@@ -1963,6 +2442,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_nv3022b
 
+.rules:build:components_display_lcd_esp_lcd_nv3052_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_nv3052
+
 .rules:build:components_display_lcd_esp_lcd_sh8601_test_apps:
   rules:
     - <<: *if-protected
@@ -1995,6 +2485,17 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_esp_lcd_st7701
+
+.rules:build:components_display_lcd_esp_lcd_st7123_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_lcd_esp_lcd_st7123
 
 .rules:build:components_display_lcd_esp_lcd_st7703_test_apps:
   rules:
@@ -2095,17 +2596,6 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_lcd_touch_esp_lcd_touch_st7123
 
-.rules:build:components_display_screen_test:
-  rules:
-    - <<: *if-protected
-    - <<: *if-label-build
-    - <<: *if-label-target_test
-    - <<: *if-trigger-job
-    - <<: *if-dev-push
-      changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-components_display_screen
-
 .rules:build:components_display_tools_esp_lv_decoder_test_apps:
   rules:
     - <<: *if-protected
@@ -2116,6 +2606,8 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_display_tools_esp_lv_decoder
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_mmap_assets
 
 .rules:build:components_display_tools_esp_lv_fs_test_apps:
   rules:
@@ -2130,6 +2622,32 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_tools_esp_mmap_assets
 
+.rules:build:components_display_tools_esp_lvgl_adapter_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+
+.rules:build:components_display_tools_esp_lvgl_adapter_benchmark:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lvgl_adapter
+    - when: manual
+      allow_failure: true # allow failure to avoid blocking the pipeline in manual trigger
+      variables:
+        MANUAL_TRIGGER_ESP_LVGL_ADAPTER_BENCHMARK: "true"
+
 .rules:build:components_display_tools_esp_mmap_assets_test_apps:
   rules:
     - <<: *if-protected
@@ -2141,7 +2659,7 @@
     - <<: *if-dev-push
       changes: *patterns-components_display_tools_esp_mmap_assets
 
-.rules:build:components_display_touch_panel_test:
+.rules:build:components_display_tools_esp_lv_eaf_player_test_apps:
   rules:
     - <<: *if-protected
     - <<: *if-label-build
@@ -2150,7 +2668,18 @@
     - <<: *if-dev-push
       changes: *patterns-build_system
     - <<: *if-dev-push
-      changes: *patterns-components_display_touch_panel
+      changes: *patterns-components_display_tools_esp_lv_eaf_player
+
+.rules:build:components_display_tools_esp_lv_lottie_player_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_display_tools_esp_lv_lottie_player
 
 .rules:build:components_keyboard_button_test_apps:
   rules:
@@ -2316,6 +2845,30 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_sensors_battery_fuel_gauge_max17048
+
+.rules:build:components_sensors_battery_fuel_gauge_bq27220_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_sensors_battery_fuel_gauge_bq27220
+
+.rules:build:components_sensors_gas_bme690_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_sensors_gas_bme690
+    - <<: *if-dev-push
+      changes: *patterns-components_i2c_bus
 
 .rules:build:components_sensors_gesture_apds9960_test_apps:
   rules:
@@ -2537,19 +3090,6 @@
     - <<: *if-dev-push
       changes: *patterns-components_touch_touch_slider_sensor
 
-.rules:build:components_usb_usb_host_rndis_test_apps:
-  rules:
-    - <<: *if-protected
-    - <<: *if-label-build
-    - <<: *if-label-target_test
-    - <<: *if-trigger-job
-    - <<: *if-dev-push
-      changes: *patterns-build_system
-    - <<: *if-dev-push
-      changes: *patterns-components_usb_usb_host_rndis_test_apps
-    - <<: *if-dev-push
-      changes: *patterns-components_usb_iot_usbh_cdc
-
 .rules:build:components_usb_iot_usbh_rndis_test_apps:
   rules:
     - <<: *if-protected
@@ -2562,6 +3102,23 @@
       changes: *patterns-components_usb_iot_usbh_rndis
     - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh_cdc
+    - <<: *if-dev-push
+      changes: *patterns-components_iot_eth
+
+.rules:build:components_usb_iot_usbh_ecm_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_usb_iot_usbh_ecm
+    - <<: *if-dev-push
+      changes: *patterns-components_usb_iot_usbh_cdc
+    - <<: *if-dev-push
+      changes: *patterns-components_iot_eth
 
 .rules:build:components_usb_esp_msc_ota_test_apps:
   rules:
@@ -2585,6 +3142,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh
 
+.rules:build:components_modem_at_test:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_modem_at
+
 .rules:build:components_usb_iot_usbh_cdc_test:
   rules:
     - <<: *if-protected
@@ -2597,6 +3165,17 @@
       changes: *patterns-components_usb_iot_usbh
     - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh_cdc
+
+.rules:build:components_iot_eth_test:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_iot_eth
 
 .rules:build:components_usb_iot_usbh_modem_test:
   rules:
@@ -2612,6 +3191,8 @@
       changes: *patterns-components_usb_iot_usbh_cdc
     - <<: *if-dev-push
       changes: *patterns-components_usb_iot_usbh_modem
+    - <<: *if-dev-push
+      changes: *patterns-components_iot_eth
 
 .rules:build:components_usb_usb_stream_test:
   rules:
@@ -2657,6 +3238,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_utilities_adc_tp_calibration
 
+.rules:build:components_utilities_log_router_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_utilities_log_router
+
 .rules:build:components_sensors_humiture_aht20_test_apps:
   rules:
     - <<: *if-protected
@@ -2690,6 +3282,17 @@
     - <<: *if-dev-push
       changes: *patterns-components_zero_detection
 
+.rules:build:components_touch_ic_bs8112a3_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_touch_ic_bs8112a3
+
 .rules:build:components_ntc_driver_test_apps:
   rules:
     - <<: *if-protected
@@ -2712,8 +3315,6 @@
     - <<: *if-dev-push
       changes: *patterns-components_sensors_power_monitor_ina236
     - <<: *if-dev-push
-      changes: *patterns-components_bus
-    - <<: *if-dev-push
       changes: *patterns-components_i2c_bus
 
 .rules:build:components_i2c_bus_test_apps:
@@ -2726,6 +3327,17 @@
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-components_i2c_bus
+
+.rules:build:components_esp_weaver_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_esp_weaver
 
 .rules:build:tools_cmake_utilities_test_apps:
   rules:
@@ -2742,6 +3354,35 @@
     - <<: *if-dev-push
       changes: *patterns-components_tools_cmake_utilities_test_component2
 
+.rules:build:components_esp_xiaozhi_test_apps:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_esp_xiaozhi
+
+.rules:build:example_xiaozhi_chat:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-label-target_test
+    - <<: *if-trigger-job
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-components_esp_xiaozhi
+    - <<: *if-dev-push
+      changes: *patterns-example_xiaozhi_chat
+
+# For benchmark
+.rules:target_test:components_display_tools_esp_lvgl_adapter_benchmark:
+  rules:
+    - when: manual
+
 # For others
 .rules:build:docs:
   rules:
@@ -2754,6 +3395,8 @@
       changes: *patterns-docs
     - <<: *if-dev-push
       changes: *patterns-docs_inc
+    - <<: *if-dev-push
+      changes: *patterns-docs_inc_2
 
 .rules:deploy:docs_preview:
   rules:
@@ -2765,6 +3408,8 @@
       changes: *patterns-docs
     - <<: *if-dev-push
       changes: *patterns-docs_inc
+    - <<: *if-dev-push
+      changes: *patterns-docs_inc_2
 
 .rules:deploy:docs_production:
   rules:

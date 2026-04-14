@@ -1,5 +1,17 @@
 # ChangeLog
 
+## v1.2.3 - 2026-1-23
+
+### Bug Fix:
+* FOC:
+    *  Fix ``Sensor::init()`` not being called after MT6701 spi sensor initialization.
+
+## v1.2.2 - 2026-1-22
+
+### Bug Fix:
+* FOC:
+    *  Fix ``Sensor::init()`` not being called after hardware sensor initialization.
+
 ## v1.2.1 - 2025-4-15
 
 ### Bug Fix:

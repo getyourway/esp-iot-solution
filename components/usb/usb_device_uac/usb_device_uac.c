@@ -456,10 +456,12 @@ static void usb_spk_task(void *pvParam)
 #if CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_RX
 static void usb_mic_task(void *pvParam)
 {
+    TickType_t xLastWakeTime = xTaskGetTickCount();
     while (1) {
         if (s_uac_device->mic_active == false) {
             // clear the notification
             ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+            xLastWakeTime = xTaskGetTickCount();
             continue;
         }
         // clear the notification
@@ -479,6 +481,8 @@ static void usb_mic_task(void *pvParam)
             s_uac_device->mic_data_size = bytes_read;
             UAC_EXIT_CRITICAL();
         }
+
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(MIC_INTERVAL_MS));
     }
 }
 #endif
@@ -505,8 +509,12 @@ esp_err_t uac_device_init(uac_device_config_t *config)
     s_uac_device->spk_itf_num = config->spk_itf_num;
     s_uac_device->mic_itf_num = config->mic_itf_num;
 #else
+#if SPEAK_CHANNEL_NUM
     s_uac_device->spk_itf_num = ITF_NUM_AUDIO_STREAMING_SPK;
+#endif
+#if MIC_CHANNEL_NUM
     s_uac_device->mic_itf_num = ITF_NUM_AUDIO_STREAMING_MIC;
+#endif
 #endif
 
     BaseType_t ret_val;

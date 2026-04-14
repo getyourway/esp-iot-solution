@@ -1,5 +1,54 @@
 # ChangeLog
 
+## v2.0.0 - 2026-4-1
+
+### Refactor:
+
+* Implement multiple instances driver by lightbulb component
+* Modify lightbulb component structure to the factory pattern
+
+## v1.11.2 - 2026-03-26
+
+### Bug Fix:
+
+* Fixed some compatibility issues
+
+## v1.11.1 - 2025-11-14
+
+### Refactor:
+
+* Add heap and idf version dependency so that it can be compiled since idf v6.0
+
+## v1.11.0 - 2025-09-17
+
+### Refactor:
+
+* Clean up the component dependency, don't depend on the `driver` component directly
+
+## v1.10.1 - 2025-09-03
+
+### Bug Fix:
+
+* Modify the variable names associated with sm16825e to ensure consistency.
+
+## v1.10.0 - 2025-08-19
+
+### Improve:
+
+* Added new dimming driver SM16825E
+
+## v1.9.0 - 2025-08-11
+
+### Improve:
+
+- Add API for get power limit
+
+## v1.8.3 - 2025-06-19
+
+### Bug Fix:
+
+- Fixed a compilation issue on IDF 6.0
+
 ## v1.8.2 - 2025-04-17
 
 ### Bug Fix:
@@ -49,7 +98,7 @@
 
 ### Enhancements:
 
-* Remove linear dimming, default to enabling curve dimming for all. 
+* Remove linear dimming, default to enabling curve dimming for all.
 
 ## v1.4.0 - 2024-11-15
 
@@ -139,7 +188,7 @@
 * The driver now supports setting white balance parameters for all channels. This means that you can adjust the white balance individually for each channel, allowing for precise control and customization of the lighting output.
 * Increased the power limit range from 100-300 to 100-500, facilitating power setting for RGBWW beads.
 * Introduced CCT output modes: standard mode (consistent with original scheme, mapping percentage to Kelvin values proportionally) and precise mode (setting individual percentages for each Kelvin value and predetermining current coefficients for each channel, scaling these coefficients proportionally during writing).
-* Some configuration changes: 
+* Some configuration changes:
   * Removed mode_mask from capability, now using led_beads to set the LED panel bead combination
   * Renamed enable_mix_cct to enable_hardware_cct, fades_ms to fade_time_ms, and enable_fades to enable_fade
   * Removed hardware_monitor_cb
@@ -182,6 +231,7 @@
 * Add a phase delay function to the PWM drive, and after enabling this function, all channel outputs will be in a complementary state.
 
 ## v0.4.1 - 2023-8-30
+
 ### Bug Fixes:
 
 * Fixed a thread safety issue.
@@ -335,8 +385,8 @@
 ### Enhancements:
 
 * Initial version
-
 * The following dimming solutions are supported
+
   * PWM
     * RGB + CW
     * RGB + CCT/Brightness
@@ -348,13 +398,14 @@
     * BP5758/BP5758D/BP5768D
   * Single Line
     * WS2812
-
 * Support for power limit
 * Support for color calibration
 * Support for effect
+
   * Blink
   * Breathe
 * Support for application layer capability configuration
+
   * Status memory
   * Fade
   * Mix CCT
